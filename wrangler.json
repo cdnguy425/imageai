@@ -1,7 +1,7 @@
 {
 	"compatibility_date": "2025-10-08",
 	"main": "src/index.ts",
-	"name": "imageai",
+	"name": "imgai",
 	"upload_source_maps": true,
 	"ai": {
 		"binding": "AI"
