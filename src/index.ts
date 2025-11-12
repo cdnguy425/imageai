@@ -1,10 +1,9 @@
 // src/index.ts
 var index_default = {
   async fetch(request, env) {
-    const url = new URL(request.url)
+    const url = new URL(request.url);
     const inputs = {
-      prompt: url.searchParams.get('prompt')
-
+      prompt: url.searchParams.get("prompt")
     };
     const response = await env.AI.run(
       "@cf/stabilityai/stable-diffusion-xl-base-1.0",
@@ -12,7 +11,9 @@ var index_default = {
     );
     return new Response(response, {
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "content-type": "image/png"
+        
       }
     });
   }
